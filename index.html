@@ -1,0 +1,343 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Juggr — The operating system for guarded AI agents at work</title>
+  <meta name="description" content="Juggr adds memory, guardrails and an audit log to AI agents at work, plus approval gates on anything risky. Pre-launch, used daily. Become a design partner.">
+  <meta name="author" content="Juggr">
+  <meta name="theme-color" content="#DEDEDE">
+  <link rel="canonical" href="https://juggr.io/">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Juggr">
+  <meta property="og:title" content="Juggr — The operating system for guarded AI agents at work">
+  <meta property="og:description" content="Memory, guardrails and an audit log, with approval gates on anything risky.">
+  <meta property="og:url" content="https://juggr.io/">
+  <meta property="og:image" content="https://juggr.io/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Juggr wordmark with the tagline: The operating system for guarded AI agents at work">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@HabibiCapital_">
+  <meta name="twitter:title" content="Juggr — The operating system for guarded AI agents at work">
+  <meta name="twitter:description" content="Memory, guardrails and an audit log, with approval gates on anything risky.">
+  <meta name="twitter:image" content="https://juggr.io/og-image.png">
+  <meta name="twitter:image:alt" content="Juggr wordmark with the tagline: The operating system for guarded AI agents at work">
+
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Red+Hat+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="#top" aria-label="Juggr home"><span class="brand-word">Juggr</span><span class="brand-os">OS</span></a>
+      <nav aria-label="Primary">
+        <ul class="nav-list">
+          <li><a href="#problem">Problem</a></li>
+          <li><a href="#how">How it works</a></li>
+          <li><a href="#atlas">Atlas</a></li>
+          <li><a href="#brains">Brains</a></li>
+          <li><a href="#plans">Plans</a></li>
+        </ul>
+      </nav>
+      <a class="btn btn-small btn-dark" href="mailto:sylvain@juggr.io">Get in touch</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="deco" aria-hidden="true">
+        <span class="line v" style="left:42%"></span>
+        <span class="line h" style="top:62%; left:57%; right:0"></span>
+        <span class="dot" style="left:42%; top:14%"></span>
+        <span class="dot" style="left:57%; top:62%"></span>
+        <span class="dot" style="right:12%; top:62%"></span>
+        <span class="line h" style="top:84%; left:0; width:40%"></span>
+        <span class="dot" style="left:40%; top:84%"></span>
+      </div>
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="status-dot" aria-hidden="true"></span>Pre-launch · used daily · starter kit v0.8.1</p>
+          <h1 id="hero-title" class="hero-title">Juggr</h1>
+          <p class="tagline">The operating system for guarded AI agents at work</p>
+          <p class="lede">Memory, guardrails and an audit log, with approval gates on anything risky.</p>
+          <div class="cta-row">
+            <a class="btn btn-coral" href="mailto:sylvain@juggr.io?subject=Juggr%20design%20partner">Become a design partner</a>
+            <a class="btn btn-ghost" href="mailto:sylvain@juggr.io">Get in touch</a>
+          </div>
+        </div>
+
+        <figure class="hero-visual">
+          <div class="approval-card" role="img" aria-label="Illustration: an Atlas approval card. Atlas asks for approval before an agent sends an email to an external recipient. Impact is marked high, autonomy level L1, guard checks passed, with Approve and Reject buttons.">
+            <div class="card-top">
+              <span class="atlas-badge"><span class="atlas-mark" aria-hidden="true">A</span>Atlas</span>
+              <span class="pill pill-warn">Approval needed</span>
+            </div>
+            <p class="card-q">An agent wants to take a high-impact action.</p>
+            <div class="card-action">
+              <span class="mono-label">Proposed action</span>
+              <p class="mono">email.send → client@example.com</p>
+              <p class="card-sub">“Weekly status summary” · drafted by agent</p>
+            </div>
+            <dl class="card-meta">
+              <div><dt>Impact</dt><dd><span class="pill pill-coral">High</span></dd></div>
+              <div><dt>Autonomy</dt><dd><span class="pill">L1</span></dd></div>
+              <div><dt>Guard checks</dt><dd class="ok">✓ Passed</dd></div>
+              <div><dt>Secrets scan</dt><dd class="ok">✓ Clean</dd></div>
+            </dl>
+            <div class="card-buttons" aria-hidden="true">
+              <span class="fake-btn fake-approve">Approve</span>
+              <span class="fake-btn fake-reject">Reject</span>
+            </div>
+            <p class="card-foot">Logged to audit trail</p>
+          </div>
+          <figcaption class="illus-note">Illustration. Example action, not real data.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- PROBLEM -->
+    <section class="section" id="problem" aria-labelledby="problem-title">
+      <div class="wrap">
+        <p class="kicker">01 · The problem</p>
+        <div class="split">
+          <h2 id="problem-title">Agent safety today is per-tool and per-person.</h2>
+          <p class="section-lede">Each developer sets their own rules. Nothing is shared across the team, and nothing is tracked across tools.</p>
+        </div>
+        <ol class="gap-list">
+          <li>
+            <span class="num" aria-hidden="true">01</span>
+            <h3>No shared team memory</h3>
+            <p>What one person's agent learns stays with that person.</p>
+          </li>
+          <li>
+            <span class="num" aria-hidden="true">02</span>
+            <h3>No team policy</h3>
+            <p>Rules live in individual setups, one developer at a time.</p>
+          </li>
+          <li>
+            <span class="num" aria-hidden="true">03</span>
+            <h3>No cross-tool audit log</h3>
+            <p>There is no single record of what agents did, across tools.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section class="section section-white" id="how" aria-labelledby="how-title">
+      <div class="wrap">
+        <p class="kicker">02 · How it works</p>
+        <div class="split">
+          <h2 id="how-title">Every agent write passes guard checks.</h2>
+          <p class="section-lede">Juggr sits between your agents and your work, with three layers that apply to everyone on the team.</p>
+        </div>
+        <div class="pillars">
+          <article class="pillar">
+            <div class="pillar-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="24" height="24"><path d="M4 6h16M4 12h16M4 18h10" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/></svg>
+            </div>
+            <h3>Memory</h3>
+            <p>Shared knowledge bases, called Brains, for a person, a team or the whole company, so context isn't trapped in one setup.</p>
+          </article>
+          <article class="pillar">
+            <div class="pillar-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="24" height="24"><path d="M12 3l8 3v6c0 4.5-3.4 8.3-8 9-4.6-.7-8-4.5-8-9V6l8-3z" stroke="currentColor" stroke-width="2" fill="none" stroke-linejoin="round"/></svg>
+            </div>
+            <h3>Guardrails</h3>
+            <ul class="ticks">
+              <li>Every agent write passes guard checks</li>
+              <li>Guard hooks block writes to protected paths</li>
+              <li>Secrets are scanned</li>
+            </ul>
+          </article>
+          <article class="pillar">
+            <div class="pillar-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="24" height="24"><path d="M6 3h9l3 3v15H6z M9 10h6M9 14h6M9 18h4" stroke="currentColor" stroke-width="2" fill="none" stroke-linejoin="round" stroke-linecap="round"/></svg>
+            </div>
+            <h3>Audit log</h3>
+            <p>One record of what agents did, plus approval gates on anything risky.</p>
+          </article>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ATLAS -->
+    <section class="section" id="atlas" aria-labelledby="atlas-title">
+      <div class="wrap">
+        <p class="kicker">03 · Approvals and Atlas</p>
+        <div class="split">
+          <h2 id="atlas-title">Atlas asks before anything high-impact.</h2>
+          <p class="section-lede">Atlas is Juggr's assistant. It runs locally, with daily and weekly loops, and puts a human in charge of the actions that matter.</p>
+        </div>
+
+        <div class="atlas-grid">
+          <div class="feature-list">
+            <div class="feature">
+              <h3>Approval before high-impact actions</h3>
+              <p>Risky actions wait for a yes. Nothing high-impact goes out on its own.</p>
+            </div>
+            <div class="feature">
+              <h3>Runs locally</h3>
+              <p>Atlas runs on your machine, on daily and weekly loops.</p>
+            </div>
+            <div class="feature">
+              <h3>Financial actions stay suggest-only</h3>
+              <p>Atlas can suggest. It does not act on money.</p>
+            </div>
+          </div>
+
+          <div class="levels" aria-labelledby="levels-title">
+            <h3 id="levels-title" class="levels-title">Autonomy levels</h3>
+            <p class="levels-sub">You choose how much an agent can do on its own, from L0 to L3.</p>
+            <div class="level-track" aria-hidden="true">
+              <span class="seg"></span><span class="seg"></span><span class="seg"></span><span class="seg"></span>
+            </div>
+            <ol class="level-labels">
+              <li><strong>L0</strong><span>least autonomy</span></li>
+              <li><strong>L1</strong></li>
+              <li><strong>L2</strong></li>
+              <li><strong>L3</strong><span>most autonomy</span></li>
+            </ol>
+            <p class="levels-note"><span class="pill pill-dark">Always</span> Financial actions: suggest-only at every level.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BRAINS -->
+    <section class="section section-white" id="brains" aria-labelledby="brains-title">
+      <div class="wrap">
+        <p class="kicker">04 · Team brains</p>
+        <div class="split">
+          <h2 id="brains-title">Knowledge moves up only with approval.</h2>
+          <p class="section-lede">A Brain is a shared knowledge base for a person, a team or a company. Knowledge is promoted step by step, never silently.</p>
+        </div>
+        <ol class="flow">
+          <li class="flow-step">
+            <span class="flow-tag">brain:you</span>
+            <h3>Draft</h3>
+            <p>Knowledge starts in a personal Brain.</p>
+          </li>
+          <li class="flow-arrow" aria-hidden="true">→</li>
+          <li class="flow-step flow-review">
+            <span class="flow-tag">needs approval</span>
+            <h3>Review</h3>
+            <p>A person approves before it moves up.</p>
+          </li>
+          <li class="flow-arrow" aria-hidden="true">→</li>
+          <li class="flow-step flow-publish">
+            <span class="flow-tag">brain:team</span>
+            <h3>Publish</h3>
+            <p>Approved knowledge reaches the team or company Brain.</p>
+          </li>
+        </ol>
+        <p class="note"><span class="pill pill-outline">In progress</span> Multi-user sharing.</p>
+      </div>
+    </section>
+
+    <!-- NVIDIA -->
+    <section class="section section-dark" id="local" aria-labelledby="local-title">
+      <div class="wrap">
+        <p class="kicker kicker-light">05 · Local-first on NVIDIA</p>
+        <div class="split">
+          <h2 id="local-title">Uses your local NVIDIA GPU when you have one.</h2>
+          <p class="section-lede">If the machine has an NVIDIA GPU, Juggr puts it to work.</p>
+        </div>
+        <div class="gpu-grid">
+          <article class="gpu-card gpu-now">
+            <span class="pill pill-coral">Today</span>
+            <p class="big-stat"><span class="tilde">~</span>0.4&nbsp;s</p>
+            <h3>Voice input, per clip</h3>
+            <p>Voice input runs through whisper.cpp on the local GPU, at about 0.4 seconds per clip.</p>
+          </article>
+          <article class="gpu-card gpu-planned">
+            <span class="pill pill-outline-light">Planned</span>
+            <p class="big-stat big-stat-muted">Open models</p>
+            <h3>On rented NVIDIA GPUs</h3>
+            <p>Planned: running open models on rented NVIDIA GPUs.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- STATUS + PLANS -->
+    <section class="section" id="plans" aria-labelledby="plans-title">
+      <div class="wrap">
+        <p class="kicker">06 · Plans</p>
+        <div class="split">
+          <h2 id="plans-title">Free to start, paid to scale.</h2>
+          <p class="section-lede">Pre-launch, but already a working product used daily. Pricing for paid tiers is not set yet.</p>
+        </div>
+        <div class="plans">
+          <article class="plan">
+            <h3>Starter kit</h3>
+            <p class="plan-price">Free</p>
+            <p>The way in. Current version: <strong>v0.8.1</strong>.</p>
+          </article>
+          <article class="plan">
+            <h3>Pro</h3>
+            <p class="plan-price plan-tbd">Paid · pricing to come</p>
+            <p>Paid tier. Details to come.</p>
+          </article>
+          <article class="plan plan-featured">
+            <h3>Team</h3>
+            <p class="plan-price plan-tbd">Paid · pricing to come</p>
+            <p>Paid tier for teams. Details to come.</p>
+          </article>
+          <article class="plan plan-dark">
+            <h3>Done-for-you</h3>
+            <p class="plan-price plan-tbd">Implementation</p>
+            <p>Done-for-you implementation for businesses.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta" id="partner" aria-labelledby="cta-title">
+      <div class="deco" aria-hidden="true">
+        <span class="line h" style="top:14%; left:0; right:0"></span>
+        <span class="dot" style="left:18%; top:14%"></span>
+        <span class="dot" style="right:22%; top:14%"></span>
+        <span class="line h" style="top:88%; left:60%; right:0"></span>
+        <span class="dot" style="left:60%; top:88%"></span>
+      </div>
+      <div class="wrap cta-inner">
+        <h2 id="cta-title">Become a design partner.</h2>
+        <p class="section-lede">Juggr is pre-launch. If your team runs AI agents at work and wants shared memory, team policy and one audit log, let's talk.</p>
+        <div class="cta-row cta-row-center">
+          <a class="btn btn-coral" href="mailto:sylvain@juggr.io?subject=Juggr%20design%20partner">Become a design partner</a>
+          <a class="btn btn-ghost" href="mailto:sylvain@juggr.io">Get in touch</a>
+        </div>
+        <p class="founder">Sylvain Nehme, founder · Habibi Capital</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <a class="brand" href="#top" aria-label="Juggr, back to top"><span class="brand-word">Juggr</span><span class="brand-os">OS</span></a>
+      <ul class="footer-links">
+        <li><a href="mailto:sylvain@juggr.io">sylvain@juggr.io</a></li>
+        <li><a href="https://x.com/HabibiCapital_" rel="noopener">X @HabibiCapital_</a></li>
+      </ul>
+      <p class="copy">© 2026 Juggr</p>
+    </div>
+  </footer>
+</body>
+</html>
