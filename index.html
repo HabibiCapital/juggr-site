@@ -81,30 +81,9 @@
         </div>
 
         <figure class="hero-visual">
-          <div class="approval-card" role="img" aria-label="Illustration: an Atlas approval card. Atlas asks for approval before an agent sends an email to an external recipient. Impact is marked high, autonomy level L1, guard checks passed, with Approve and Reject buttons.">
-            <div class="card-top">
-              <span class="atlas-badge"><span class="atlas-mark" aria-hidden="true">A</span>Atlas</span>
-              <span class="pill pill-warn">Approval needed</span>
-            </div>
-            <p class="card-q">An agent wants to take a high-impact action.</p>
-            <div class="card-action">
-              <span class="mono-label">Proposed action</span>
-              <p class="mono">email.send → client@example.com</p>
-              <p class="card-sub">“Weekly status summary” · drafted by agent</p>
-            </div>
-            <dl class="card-meta">
-              <div><dt>Impact</dt><dd><span class="pill pill-coral">High</span></dd></div>
-              <div><dt>Autonomy</dt><dd><span class="pill">L1</span></dd></div>
-              <div><dt>Guard checks</dt><dd class="ok">✓ Passed</dd></div>
-              <div><dt>Secrets scan</dt><dd class="ok">✓ Clean</dd></div>
-            </dl>
-            <div class="card-buttons" aria-hidden="true">
-              <span class="fake-btn fake-approve">Approve</span>
-              <span class="fake-btn fake-reject">Reject</span>
-            </div>
-            <p class="card-foot">Logged to audit trail</p>
-          </div>
-          <figcaption class="illus-note">Illustration. Example action, not real data.</figcaption>
+          <div class="frame"><div class="frame-bar" aria-hidden="true"><i></i><i></i><i></i><span class="frame-title">Juggr · Today</span></div><picture><source type="image/webp" srcset="img/today.webp"><img src="img/today.jpg" width="1600" height="1000" alt="Juggr's Today screen for a demo user, Sam: the first task on today's plan with an Open Atlas button, a four-item plan for the day, and a Needs you panel with two Atlas approvals waiting for review." decoding="async" fetchpriority="high"></picture></div>
+          <div class="phone"><picture><source type="image/webp" srcset="img/phone-today.webp"><img src="img/phone-today.jpg" width="600" height="1298" alt="Juggr's Today view on a phone: the first task on the plan, an Open Atlas button and the Needs you list with Review buttons." decoding="async"></picture></div>
+          <figcaption class="shot-note">The Today screen on desktop and phone, with demo data.</figcaption>
         </figure>
       </div>
     </section>
@@ -185,11 +164,20 @@
           <p class="section-lede">Atlas is Juggr's assistant. It runs locally, with daily and weekly loops, and puts a human in charge of the actions that matter.</p>
         </div>
 
+        <figure class="shot shot-wide">
+          <div class="frame"><div class="frame-bar" aria-hidden="true"><i></i><i></i><i></i><span class="frame-title">Juggr · Needs you</span></div><picture><source type="image/webp" srcset="img/needs-you-details.webp"><img src="img/needs-you-details.jpg" width="1600" height="674" alt="The Needs you screen in Juggr. Atlas asks to save the launch announcement draft, with Approve, Deny and Reply to Atlas buttons. The open details show the file it will write, the three lines it writes, the risk (medium, adds or replaces a file in your vault), the knowledge and setting it runs under, and that unanswered requests are denied after 10 minutes." loading="lazy" decoding="async"></picture></div>
+          <figcaption>Every approval shows what will change, how risky it is, and which setting it ran under.</figcaption>
+        </figure>
+
         <div class="atlas-grid">
           <div class="feature-list">
             <div class="feature">
               <h3>Approval before high-impact actions</h3>
-              <p>Risky actions wait for a yes. Nothing high-impact goes out on its own.</p>
+              <p>Risky actions wait for a yes: approve, deny, or reply to Atlas. Unanswered requests are denied, not done.</p>
+            </div>
+            <div class="feature">
+              <h3>Right where you work</h3>
+              <p>The same approval cards show up in the Atlas chat and in one Needs you list.</p>
             </div>
             <div class="feature">
               <h3>Runs locally</h3>
@@ -200,20 +188,51 @@
               <p>Atlas can suggest. It does not act on money.</p>
             </div>
           </div>
+          <figure class="shot">
+            <div class="frame"><div class="frame-bar" aria-hidden="true"><i></i><i></i><i></i><span class="frame-title">Juggr · Atlas chat</span></div><picture><source type="image/webp" srcset="img/atlas-chat-approvals.webp"><img src="img/atlas-chat-approvals.jpg" width="1508" height="858" alt="Two approval cards in the Atlas chat. One asks to save the launch announcement draft, marked medium risk, showing the file and the lines it writes. The other asks to email the launch checklist to the design team, marked high risk. Each has Approve, Deny and Reply buttons and is denied after 10 minutes without an answer." loading="lazy" decoding="async"></picture></div>
+          </figure>
+        </div>
+      </div>
+    </section>
 
-          <div class="levels" aria-labelledby="levels-title">
-            <h3 id="levels-title" class="levels-title">Autonomy levels</h3>
-            <p class="levels-sub">You choose how much an agent can do on its own, from L0 to L3.</p>
-            <div class="level-track" aria-hidden="true">
-              <span class="seg"></span><span class="seg"></span><span class="seg"></span><span class="seg"></span>
-            </div>
-            <ol class="level-labels">
-              <li><strong>L0</strong><span>least autonomy</span></li>
-              <li><strong>L1</strong></li>
-              <li><strong>L2</strong></li>
-              <li><strong>L3</strong><span>most autonomy</span></li>
+    <!-- HOW CAREFUL -->
+    <section class="section section-white" id="careful" aria-labelledby="careful-title">
+      <div class="wrap">
+        <p class="kicker">04 · Guardrails</p>
+        <div class="careful-grid">
+          <div>
+            <h2 id="careful-title">You choose how careful Atlas is.</h2>
+            <p class="section-lede careful-lede">Four levels, and each session keeps its own. Whatever the level, every agent write still passes guard checks.</p>
+            <ol class="levels-list">
+              <li><h3>Ask first <span class="pill pill-coral">Recommended</span></h3><p>Reads freely. Asks before it runs anything, sends anything or changes a file outside your notes.</p></li>
+              <li><h3>Edit freely</h3><p>Writes and changes files in your knowledge on its own. Asks before anything else.</p></li>
+              <li><h3>Plan first</h3><p>Looks around and writes a plan. Changes nothing until you OK the plan.</p></li>
+              <li><h3>Auto</h3><p>Gets on with it. A safety check stops risky steps and asks you about those.</p></li>
             </ol>
-            <p class="levels-note"><span class="pill pill-dark">Always</span> Financial actions: suggest-only at every level.</p>
+          </div>
+          <figure class="shot shot-narrow">
+            <div class="frame"><div class="frame-bar" aria-hidden="true"><i></i><i></i><i></i><span class="frame-title">How careful</span></div><picture><source type="image/webp" srcset="img/how-careful.webp"><img src="img/how-careful.jpg" width="799" height="1065" alt="The How careful is Atlas? picker in Juggr with four levels: Ask first (recommended and selected), Edit freely, Plan first and Auto. Each level says what Atlas does on its own and what it asks about first. Auto warns that it can still make mistakes." loading="lazy" decoding="async"></picture></div>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- MEMORY -->
+    <section class="section" id="memory" aria-labelledby="memory-title">
+      <div class="wrap">
+        <p class="kicker">05 · Memory</p>
+        <div class="careful-grid memory-grid">
+          <figure class="shot">
+            <div class="frame"><div class="frame-bar" aria-hidden="true"><i></i><i></i><i></i><span class="frame-title">My knowledge</span></div><picture><source type="image/webp" srcset="img/atlas-remembers.webp"><img src="img/atlas-remembers.jpg" width="1249" height="866" alt="The What Atlas remembers card in Juggr: four short notes about how the user works, such as keep answers short and always ask before sending anything outside the team, saved with the user's notes, with an Edit button and other notes Atlas keeps on working hours and writing style." loading="lazy" decoding="async"></picture></div>
+          </figure>
+          <div>
+            <h2 id="memory-title">Atlas remembers, in notes you can read.</h2>
+            <p class="section-lede careful-lede">What Atlas learns about how you work is kept as plain notes in your own vault, next to the rest of your notes.</p>
+            <ul class="ticks memory-ticks">
+              <li>Open and edit what Atlas remembers at any time</li>
+              <li>Only you can see it, unless you share it</li>
+              <li>Sharing always asks first and shows who will see it</li>
+            </ul>
           </div>
         </div>
       </div>
@@ -222,38 +241,62 @@
     <!-- BRAINS -->
     <section class="section section-white" id="brains" aria-labelledby="brains-title">
       <div class="wrap">
-        <p class="kicker">04 · Team brains</p>
+        <p class="kicker">06 · Team brains</p>
         <div class="split">
           <h2 id="brains-title">Knowledge moves up only with approval.</h2>
-          <p class="section-lede">A Brain is a shared knowledge base for a person, a team or a company. Knowledge is promoted step by step, never silently.</p>
+          <p class="section-lede">A Brain is a knowledge base for a person, a team or a company. Knowledge moves from yours, to team review, to company, step by step and never silently.</p>
         </div>
-        <ol class="flow">
-          <li class="flow-step">
-            <span class="flow-tag">brain:you</span>
-            <h3>Draft</h3>
-            <p>Knowledge starts in a personal Brain.</p>
+        <ol class="steps">
+          <li class="step">
+            <div class="step-text">
+              <span class="step-num" aria-hidden="true">1</span>
+              <span class="flow-tag">Only you</span>
+              <h3>Your knowledge</h3>
+              <p>Your notes and the apps Atlas can read stay in your own space. Nothing is shared unless you share it. The team spaces you belong to sit right next to it.</p>
+            </div>
+            <figure class="shot"><div class="frame"><div class="frame-bar" aria-hidden="true"><i></i><i></i><i></i><span class="frame-title">My knowledge</span></div><picture><source type="image/webp" srcset="img/brains-1-yours.webp"><img src="img/brains-1-yours.jpg" width="1600" height="770" alt="My knowledge in Juggr: what Atlas knows (your notes, plus Gmail, Google Calendar, Google Drive and Slack to connect), a banner saying nothing here is shared unless you share it, and a Your Team knowledge list with brains such as Sample Co, Accounting, Business Operations and Finance, each showing how many people are in it." loading="lazy" decoding="async"></picture></div></figure>
           </li>
-          <li class="flow-arrow" aria-hidden="true">→</li>
-          <li class="flow-step flow-review">
-            <span class="flow-tag">needs approval</span>
-            <h3>Review</h3>
-            <p>A person approves before it moves up.</p>
+          <li class="step step-review">
+            <div class="step-text">
+              <span class="step-num" aria-hidden="true">2</span>
+              <span class="flow-tag">Needs approval</span>
+              <h3>Team review</h3>
+              <p>A shared note waits in review. The reviewer sees exactly what the team knowledge will gain, then approves or declines.</p>
+            </div>
+            <figure class="shot"><div class="frame"><div class="frame-bar" aria-hidden="true"><i></i><i></i><i></i><span class="frame-title">Team · Review</span></div><picture><source type="image/webp" srcset="img/brains-2-review.webp"><img src="img/brains-2-review.jpg" width="1600" height="391" alt="The Team brain review tab in Juggr. A note called Planning calendar for next year, shared by Morgan Reyes to the Sample Co brain, waits for review. It shows what the Sample Co brain will know if approved, with Approve and Decline buttons." loading="lazy" decoding="async"></picture></div></figure>
           </li>
-          <li class="flow-arrow" aria-hidden="true">→</li>
-          <li class="flow-step flow-publish">
-            <span class="flow-tag">brain:team</span>
-            <h3>Publish</h3>
-            <p>Approved knowledge reaches the team or company Brain.</p>
+          <li class="step step-publish">
+            <div class="step-text">
+              <span class="step-num" aria-hidden="true">3</span>
+              <span class="flow-tag">Shared with the company</span>
+              <h3>Company knowledge</h3>
+              <p>Once approved, the note lands in the shared space with who added it and who OK'd it. Your own knowledge stays private.</p>
+            </div>
+            <figure class="shot"><div class="frame"><div class="frame-bar" aria-hidden="true"><i></i><i></i><i></i><span class="frame-title">Sample Co brain</span></div><picture><source type="image/webp" srcset="img/brains-3-company.webp"><img src="img/brains-3-company.jpg" width="1600" height="625" alt="The Sample Co brain, shared with 13 people. Under What's in it, the Planning calendar for next year note, added by Morgan Reyes and OK'd by Skyler Grant. A What stays private card lists your notes, email, calendar, files, chats and drafts." loading="lazy" decoding="async"></picture></div></figure>
           </li>
         </ol>
-        <p class="note"><span class="pill pill-outline">In progress</span> Multi-user sharing.</p>
+        <p class="note"><span class="pill pill-dark">Live</span> Multi-user team review, with approval before anything is shared.</p>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="section" id="projects" aria-labelledby="projects-title">
+      <div class="wrap">
+        <p class="kicker">07 · Projects</p>
+        <div class="split">
+          <h2 id="projects-title">Your work, on one board.</h2>
+          <p class="section-lede">Projects sit next to your plan and your approvals: active, blocked, paused and ideas, at a glance.</p>
+        </div>
+        <figure class="shot shot-wide">
+          <div class="frame"><div class="frame-bar" aria-hidden="true"><i></i><i></i><i></i><span class="frame-title">Juggr · Projects</span></div><picture><source type="image/webp" srcset="img/projects.webp"><img src="img/projects.jpg" width="1600" height="751" alt="The Projects board in Juggr with four columns: Active (Spring product launch, Customer onboarding guide, Website refresh, Customer survey), Blocked (Hire a support lead), Paused (Podcast pilot) and Ideas (Team offsite, Monthly newsletter)." loading="lazy" decoding="async"></picture></div>
+        </figure>
       </div>
     </section>
 
     <!-- NVIDIA -->
     <section class="section section-dark" id="local" aria-labelledby="local-title">
       <div class="wrap">
-        <p class="kicker kicker-light">05 · Local-first on NVIDIA</p>
+        <p class="kicker kicker-light">08 · Local-first on NVIDIA</p>
         <div class="split">
           <h2 id="local-title">Uses your local NVIDIA GPU when you have one.</h2>
           <p class="section-lede">If the machine has an NVIDIA GPU, Juggr puts it to work.</p>
@@ -278,7 +321,7 @@
     <!-- STATUS + PLANS -->
     <section class="section" id="plans" aria-labelledby="plans-title">
       <div class="wrap">
-        <p class="kicker">06 · Plans</p>
+        <p class="kicker">09 · Plans</p>
         <div class="split">
           <h2 id="plans-title">Free to start, paid to scale.</h2>
           <p class="section-lede">Pre-launch, but already a working product used daily. Pricing for paid tiers is not set yet.</p>
